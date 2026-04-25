@@ -11,19 +11,19 @@ Pydub utilise ffmpeg (ou avconv) pour le décodage/encodage.
 Installe ffmpeg : https://ffmpeg.org/download.html
 
 Usage :
-    python split_album.py \\
-        --mp3     "Rhapsody - Symphony of Enchanted Lands (Álbum).mp3" \\
-        --xml     rhapsody-symphony-of-enchanted-lands-album_meta.xml \\
-        --sqlite  rhapsody-symphony-of-enchanted-lands-album_meta.sqlite \\
-        --cover   cover.jpg \\
-        --outdir  ~/Musique
+    python split_album.py \
+        --mp3     "northern-lights-echoes-of-the-storm.mp3" \
+        --xml     "northern-lights-echoes-of-the-storm_meta.xml" \
+        --sqlite  "northern-lights-echoes-of-the-storm_meta.sqlite" \
+        --cover   "cover.jpg" \
+        --outdir  "~/Musique"
 
 Structure de sortie (exemple) :
     ~/Musique/
-    └── Rhapsody of Fire/
-        └── Symphony Of Enchanted Lands (1998)/
-            ├── 01 - Epicus Furor.mp3
-            ├── 02 - Emerald Sword.mp3
+    └── <Artiste>/                        ← nom du groupe ou de l'artiste
+        └── <Album (Année)>/              ← titre de l'album + année
+            ├── 01 - <Titre piste 1>.mp3
+            ├── 02 - <Titre piste 2>.mp3
             └── ...
 """
 
